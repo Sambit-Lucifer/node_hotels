@@ -1,14 +1,14 @@
 const express = require("express");
 const app = express();
 const connectDB = require("./db");
-require('dotenv').config();
 const bodyParser = require("body-parser");
 app.use(bodyParser.json()); // Data will parse to javascript lang and store in req.body
 
+require('dotenv').config();
 // const Person = require("./models/Person");
 // const MenuItem = require("./models/MenuIem");
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 4000;
 
 app.get("/", function (req, res) {
   res.send("Welcome To Our Hotel");
